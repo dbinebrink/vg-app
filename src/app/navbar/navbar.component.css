@@ -1,0 +1,11 @@
+.navbar-inverse {
+    margin-bottom: 0;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 0;
+}
+
+.login-link {
+    padding-right: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
