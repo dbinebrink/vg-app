@@ -1,0 +1,22 @@
+.btn {
+    padding: 5px 30px;
+}
+
+.search-box {
+    margin: 0 10px;
+    display: inline-block;
+    max-width: 200px;
+}
+
+.btn.btn-search {
+    display: inline-block;
+}
+
+.btn-edit {
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+
+.btn-delete {
+    padding: 2px 5px;
+}
