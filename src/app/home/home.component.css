@@ -1,0 +1,13 @@
+
+.home-box {
+    background: #fff;
+    transform: translateX(-500px);
+    opacity: 0.1;
+    height: 400px;
+    padding: 20px;
+    border: solid 1px #eee;
+}
+
+ul {
+    padding-left: 20px;
+}
