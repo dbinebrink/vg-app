@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -16,8 +17,10 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
 import { SearchComponent } from './main/search/search.component';
+import { OpenCloseComponent } from './open-close/open-close.component';
 
 const appRoutes: Routes = [
+  { path: 'animate', component: OpenCloseComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
@@ -40,12 +43,14 @@ const appRoutes: Routes = [
     ProductsComponent,
     HomeComponent,
     SidebarComponent,
-    SearchComponent
+    SearchComponent,
+    OpenCloseComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
