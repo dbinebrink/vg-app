@@ -1,0 +1,19 @@
+.login-form input {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    min-width: 400px;
+    border: solid 1px #ddd;
+    border-radius: 5px;
+    display: block;
+}
+
+#error-box {
+    display: none;
+    background: #ec9090;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-width: 400px;
+}

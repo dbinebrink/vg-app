@@ -2,8 +2,8 @@
 
 <hr>
 <div class="form-group">
-  <label for="search">Search keyword:</label>
-    <input type="search" class="form-control search-box" id="search">
+  <label for="search">Search keyword: {{ searchKeyword }}</label><br>
+    <input type="search" class="form-control search-box" id="search" [(ngModel)]="productFilter">
     <button type="submit" class="btn btn-default btn-search">Search</button>
 </div>
 
@@ -12,105 +12,36 @@
 <div class="container-fluid">
 
   <div class="row">
-    <table class="table table-striped">
+    <table class="table table-striped" *ngIf='products && products.length'>
       <thead>
         <tr>
-          <th>Game</th>
+          <th>Title</th>
+          <th>Genre</th> 
           <th>System</th>
           <th>Year</th>
+          <th>Rating</th>
           <th>Edit / Delete</th>
         </tr>
       </thead>
-      <tbody> <!-- do an ngfor for each table row here from a json service -->
-        <tr>
-          <td>F-Zero</td>
-          <td>SNES</td>
-          <td>1991</td>
+      <tbody> 
+        <tr *ngFor="let product of filteredProducts">
+          <td>{{ product.title }}</td>
+          <td>{{ product.genre | titlecase }}</td>
+          <td>{{ product.system | uppercase }}</td>
+          <td>{{ product.year }}</td>
+          <td>{{ product.rating }}</td>
           <td>
-            <button class="btn btn-edit">Edit</button>
-            <button class="btn btn-delete">Delete</button>
+            <button class="btn btn-edit" (click)="editProduct()">Edit</button>
+            <button class="btn btn-delete" (click)="deleteProduct()">Delete</button>
           </td>
         </tr>
-        <tr>
-          <td>Zelda: A Link to the Past</td>
-          <td>SNES</td>
-          <td>1991</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
-        <tr>
-          <td>Blaster Master</td>
-          <td>NES</td>
-          <td>1988</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-         </tr>
-        <tr>
-          <td>Pilotwings</td>
-          <td>SNES</td>
-          <td>1991</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
-        <tr>
-          <td>Contra 3</td>
-          <td>SNES</td>
-          <td>1991</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
-        <tr>
-          <td>Adventure Island</td>
-          <td>NES</td>
-          <td>1987</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
-        <tr>
-          <td>Mario 64</td>
-          <td>N64</td>
-          <td>1995</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
-        <tr>
-          <td>Contra 3</td>
-          <td>SNES</td>
-          <td>1991</td>
-          <td>
-              <button class="btn btn-edit">Edit</button>
-              <button class="btn btn-delete">Delete</button>
-            </td>
-          </tr>
       </tbody>
     </table>
 
   </div>
   <div class="row">
-  
-    <ul class="pagination">
-      <li><a href="#">1</a></li>
-      <li class="active"><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-    </ul>
-  
-  </div>
-  <div class="row">
 
+    <hr>
     <button type="submit" class="btn btn-default">Add Product</button>
 
   </div>
