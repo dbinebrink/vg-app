@@ -9,6 +9,9 @@ import { ProductService } from './product.service';
 })
 export class ProductsComponent implements OnInit {
 
+  products: IProduct[] = [];
+  filteredProducts: IProduct[];
+
   _productFilter: string;   
   errorMessage: any;
 
@@ -26,12 +29,7 @@ export class ProductsComponent implements OnInit {
       product.title.toLocaleLowerCase().indexOf(keyword) !== -1);   
   }
   
-  filteredProducts: IProduct[];
-
-  products: IProduct[] = [];
-
   constructor(private productService: ProductService) {  // set default values in the class constructor
-
   }
 
   ngOnInit(): void {
@@ -41,6 +39,7 @@ export class ProductsComponent implements OnInit {
       products => {
         this.products = products;
         this.filteredProducts = this.products;
+        console.log(this.products);
       },
       error => this.errorMessage = <any>error
     );

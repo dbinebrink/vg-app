@@ -10,10 +10,10 @@ import { catchError, tap } from 'rxjs/operators';
     providedIn: 'root'  // this injects the Service Syringe into the Root (Trunk) of the tree
 })  
 export class ProductService {
-    private productUrl = '/assets/products.json';
 
-    // SYRINGES are used by the whole CLASS
-    constructor(private http: HttpClient) {
+    private productUrl = '/assets/products.json';  // change this to an external URL
+    
+    constructor(private http: HttpClient) {  // SYRINGES are used by the whole CLASS
     }
 
     // get products returns an OBSERVABLE ARRAY as a SERVICE
@@ -35,6 +35,5 @@ export class ProductService {
         console.error(errorMessage);
         return throwError(errorMessage);
     }
-
 }
 

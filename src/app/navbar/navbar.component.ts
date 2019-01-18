@@ -24,6 +24,11 @@ export class NavbarComponent implements OnInit {
       title: 'Go to About page'
     },
     {
+      label: 'User List',
+      url: '/user-list',
+      title: 'Go to User List page'
+    },
+    {
       label: 'Contact',
       url: '/contact',
       title: 'Go to Contact page'
@@ -33,10 +38,6 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  runAlert(): void {
-    alert('yo this is a click event');
   }
 
 }

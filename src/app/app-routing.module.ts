@@ -7,10 +7,12 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, redirectTo: '' },
   { path: 'user', component: UserComponent },
+  { path: 'user-list', component: UserListComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'products', component: ProductsComponent },

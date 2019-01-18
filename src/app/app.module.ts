@@ -18,6 +18,7 @@ import { ProductsComponent } from './products/products.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
 import { SearchComponent } from './main/search/search.component';
 import { UserComponent } from './user/user.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     SidebarComponent,
     SearchComponent,
-    UserComponent
+    UserComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
