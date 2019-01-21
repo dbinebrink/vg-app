@@ -10,8 +10,7 @@ import { catchError, tap } from 'rxjs/operators';
 })  
 export class UserListService {
 
-    // private userListUrl = 'https://api.nasa.gov/planetary/apod?api_key=7WqB2NYW6K9cLyq4Uk1ZZ7LYO3hPufVQtVJI5Wgn&date=1999-04-03';  // the IUserList INTERFACE has to match this
-    private userListUrl = 'https://reqres.in/api/users?per_page=12';  // the IUserList INTERFACE has to match this
+    private userListUrl = 'https://reqres.in/api/users?per_page=10';  // the IUserList INTERFACE has to match this
 
     constructor(private http: HttpClient) {
     }

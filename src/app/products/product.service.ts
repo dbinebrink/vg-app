@@ -11,6 +11,24 @@ import { catchError, tap } from 'rxjs/operators';
 })  
 export class ProductService {
 
+    // TODO: api key for IGDB is 
+    // Request URL
+    // https://api-endpoint.igdb.com
+    // App name
+    // Dan Binebrink's App
+    // Key
+    // ef75a479023be8ff1b51a01a312c0cc5
+    // Add this as a user-key parameter to your API calls to authenticate.
+    
+    // Request URL
+    // https://api-v3.igdb.com
+    // App name
+    // Dan Binebrink's App (v3)
+    // Key
+    // 34ebce2b3f3c30449a7b30c6e6ba4ce0
+    // Add this as a user-key parameter to your API calls to authenticate.
+    
+
     private productUrl = '/assets/products.json';  // change this to an external URL
     
     constructor(private http: HttpClient) {  // SYRINGES are used by the whole CLASS
