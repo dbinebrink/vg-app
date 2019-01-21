@@ -1,6 +1,7 @@
-User list here
+<h2>User list here</h2>
+<br>
 
-<table class="table table-striped" *ngIf='users && users.length'>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
@@ -9,12 +10,12 @@ User list here
       <th>Avatar</th>
     </tr>
   </thead>
-  <tbody> 
-    <tr *ngFor='let user of users'>
-      <td>{{ user.sold }}</td>
-      <td>{{ user.string }}</td>
-      <td>{{ user.pending }}</td>
-      <td>{{ user.available }}</td>
+  <tbody>  <!-- NGFOR OVER ARRAYS, JUST ACCESS THE ARRAY PART OF AN OBJECT -->
+    <tr *ngFor='let user of users.data'>  <!-- it was just USERS.DATA and look through THAT array!!!!! I figured it out!!! I can now parse through any JSON response -->
+      <td><b>{{ user.id }}</b></td>
+      <td>{{ user.first_name }}</td>
+      <td>{{ user.last_name }}</td>
+      <td><img src="{{ user.avatar }}" style="width: 30px;"></td>
     </tr>
   </tbody>
 </table>

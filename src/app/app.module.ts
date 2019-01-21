@@ -20,6 +20,8 @@ import { SearchComponent } from './main/search/search.component';
 import { UserComponent } from './user/user.component';
 import { UserListComponent } from './user-list/user-list.component';
 
+import { KeysPipe } from './shared/keys.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { UserListComponent } from './user-list/user-list.component';
     SidebarComponent,
     SearchComponent,
     UserComponent,
-    UserListComponent
+    UserListComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
