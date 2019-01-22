@@ -6,13 +6,15 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
-import { UserComponent } from './user/user.component';
+import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { GamesComponent } from './games/games.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, redirectTo: '' },
-  { path: 'user', component: UserComponent },
+  { path: 'user-welcome', component: UserWelcomeComponent },
   { path: 'user-list', component: UserListComponent },
+  { path: 'games', component: GamesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'products', component: ProductsComponent },

@@ -29,6 +29,11 @@ export class NavbarComponent implements OnInit {
       title: 'Go to User List page'
     },
     {
+      label: 'Game List',
+      url: '/games',
+      title: 'Go to Game List page'
+    },
+    {
       label: 'Contact',
       url: '/contact',
       title: 'Go to Contact page'

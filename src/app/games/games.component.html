@@ -1,0 +1,20 @@
+<h1>Items</h1>
+<br>
+<div class="form-group">
+  <label for="search">Search keyword: {{ searchKeyword }}</label><br>
+    <input type="search" class="form-control search-box" id="search" [(ngModel)]="gamesFilter">
+    <button type="submit" class="btn btn-default btn-search">Search</button>
+</div>
+
+<table class="table table-striped" *ngIf='games.results'> 
+  <tr>  
+    <th style="width: 15%">&nbsp;</th>
+    <th style="width: 30%">Name</th>
+    <th>Description</th>
+  </tr>
+  <tr *ngFor='let game of games.results'>    <!-- NGFOR ONLY OVER [ARRAYS], OBJECTS JUST SPECIFY THE VALUE, NO LOOPING -->
+    <td><img src="{{ game.image.icon_url }}" style="width: 80px;"></td>
+    <td><b>{{ game.name }}</b></td>
+    <td>{{ game.deck }}</td>
+  </tr>
+</table>

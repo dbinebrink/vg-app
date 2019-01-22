@@ -1,4 +1,4 @@
-<h2>Show list of games here from IGDB</h2>
+<h1>Users</h1>
 <br>
 
 <table class="table table-striped">
@@ -10,7 +10,7 @@
       <th>Avatar</th>
     </tr>
   </thead>
-  <tbody>  <!-- NGFOR OVER ARRAYS, JUST ACCESS THE ARRAY PART OF AN OBJECT -->
+  <tbody>  <!-- NGFOR is for ARRAYS, not objects -->
     <tr *ngFor='let user of users.data'>  <!-- it was just USERS.DATA and look through THAT array!!!!! I figured it out!!! I can now parse through any JSON response -->
       <td><b>{{ user.id }}</b></td>
       <td>{{ user.first_name }}</td>

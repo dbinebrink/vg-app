@@ -17,10 +17,9 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
 import { SearchComponent } from './main/search/search.component';
-import { UserComponent } from './user/user.component';
+import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
-
-import { KeysPipe } from './shared/keys.pipe';
+import { GamesComponent } from './games/games.component';
 
 @NgModule({
   declarations: [
@@ -36,9 +35,9 @@ import { KeysPipe } from './shared/keys.pipe';
     HomeComponent,
     SidebarComponent,
     SearchComponent,
-    UserComponent,
+    UserWelcomeComponent,
     UserListComponent,
-    KeysPipe
+    GamesComponent
   ],
   imports: [
     BrowserModule,

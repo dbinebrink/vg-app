@@ -20,8 +20,8 @@ export class ProductsComponent implements OnInit {
   }
   set productFilter(value:string) {
     this._productFilter = value;
-    this.filteredProducts = this.productFilter ? this.performFilter(this.productFilter) : this.products;  // if there is a product filter, perform the filter, otherwise show all
-  }  // for search keywords, always use a getter/setter trend
+    this.filteredProducts = this.productFilter ? this.performFilter(this.productFilter) : this.products;  // if filter word exists, perform the filter, otherwise show all
+  }  
 
   performFilter(keyword: string): IProduct[] {
     keyword = keyword.toLocaleLowerCase();
@@ -29,25 +29,16 @@ export class ProductsComponent implements OnInit {
       product.title.toLocaleLowerCase().indexOf(keyword) !== -1);   
   }
   
-  constructor(private productService: ProductService) {  // set default values in the class constructor
-  }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-  // this get products service and method returns a GOD STREAM, that cannot be contained in a variable, YOU MUST SUBSCRIBE
-  // first get the products, but we want the filtered products next
     this.productService.getProducts().subscribe(
       products => {
         this.products = products;
         this.filteredProducts = this.products;
-        console.log(this.products);
       },
       error => this.errorMessage = <any>error
     );
   }
 
-  editProduct(): void {
-  }
-
-  deleteProduct(): void {
-  }
 }
