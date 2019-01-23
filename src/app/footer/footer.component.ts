@@ -5,9 +5,9 @@ import { Component, OnInit } from '@angular/core';
   template: `<footer class="container-fluid">
               <p>{{ footerTitle }}</p>
              </footer>`,
-  styles: [`footer { 
-              padding: 10px 20px; 
-              background: #003366; 
+  styles: [`footer {
+              padding: 10px 20px;
+              background: #003366;
               color: #fff;
             }`]
 })

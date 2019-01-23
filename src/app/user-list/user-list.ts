@@ -3,5 +3,5 @@ export interface IUserList {
     per_page: string;
     total: string;
     total_pages: string;
-    data?: Array<any>
+    data?: Array<any>;
 }

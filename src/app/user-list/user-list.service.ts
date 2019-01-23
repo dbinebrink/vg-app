@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class UserListService {
 
-    private userListUrl = 'https://reqres.in/api/users?per_page=10';  // the IUserList INTERFACE has to match this
+    private userListUrl = 'https://reqres.in/api/users?per_page=10';  
 
     constructor(private http: HttpClient) { }
 
