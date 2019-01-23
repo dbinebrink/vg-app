@@ -1,11 +1,14 @@
-
+<!-- all forms need FormsModule imported, fyi -->
 <div class="container-fluid">
   <h2>Log In</h2>
   <div id="error-box">this is an error box</div>
+
   <form class="login-form">
-    <input placeholder="Username" [(ngModel)]="username" name="username" required>  <!-- ARE YOU USING A FORMS MODULE THING HERE? IMPORT FORMSMODULE!!! -->
-    <input placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+    <input name="username" placeholder="Username" [(ngModel)]="username" type="text" autocomplete="off" required />
+    <input name="password" placeholder="Password" [(ngModel)]="password" type="password" autocomplete="off" required />
     
-    <button type="submit" class="btn btn-primary" (click)="login()">Submit</button>
+    <input type="submit" value="Log In" class="btn btn-primary" (click)="login()" />
   </form>
+
+
 </div>

@@ -11,7 +11,7 @@ export class GamesService {
     private apiKey = "18d9156ca88a5d01297a4718912219e86c95bd82";
     public queryString = "sonic";
 
-    private gamesUrl = 'https://www.giantbomb.com/api/search/?api_key=' 
+    private gamesUrl = '//www.giantbomb.com/api/search/?api_key=' 
         + this.apiKey + '&format=json'  + '&query=' + this.queryString + '&resources=game';  
 
     constructor(private http: HttpClient) {}

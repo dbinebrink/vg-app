@@ -16,15 +16,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loggedIn = false;
-    console.log(this.loggedIn);
   }
 
   login(): void {
     if(this.username == 'admin' && this.password == 'admin') {
       this.loggedIn = true;
-      console.log(this.loggedIn);
       this.router.navigate(["user-welcome"]);
-      // add a logout link to the navbar, remove the log in button
     }
     else {
       let el = document.getElementById("error-box");

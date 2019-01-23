@@ -19,11 +19,6 @@ export class NavbarComponent implements OnInit {
       title: 'Go to Products page'
     },
     {
-      label: 'About',
-      url: '/about',
-      title: 'Go to About page'
-    },
-    {
       label: 'User List',
       url: '/user-list',
       title: 'Go to User List page'
@@ -32,6 +27,11 @@ export class NavbarComponent implements OnInit {
       label: 'Game List',
       url: '/games',
       title: 'Go to Game List page'
+    },
+    {
+      label: 'About',
+      url: '/about',
+      title: 'Go to About page'
     },
     {
       label: 'Contact',

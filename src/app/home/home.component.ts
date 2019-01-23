@@ -9,7 +9,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('homeAnimateTrigger', [
       state('finished', style({ 
-        transform: 'translateX(0)', opacity: 1
+        transform: 'translateX(0)', 
+        opacity: 1
       })),
       transition('* => finished', [ 
         animate('0.4s ease-out') 

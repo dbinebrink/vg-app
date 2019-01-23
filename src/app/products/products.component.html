@@ -2,9 +2,9 @@
 
 <hr>
 <div class="form-group">
-  <label for="search">Search keyword: {{ searchKeyword }}</label><br>
+  <label for="search">Filter keyword: {{ searchKeyword }}</label><br>
     <input type="search" class="form-control search-box" id="search" [(ngModel)]="productFilter">
-    <button type="submit" class="btn btn-default btn-search">Search</button>
+    <button type="submit" class="btn btn-default btn-search">Filter</button>
 </div>
 
 <hr>
@@ -20,7 +20,6 @@
           <th>System</th>
           <th>Year</th>
           <th>Rating</th>
-          <th>Edit / Delete</th>
         </tr>
       </thead>
       <tbody> 
@@ -30,10 +29,6 @@
           <td>{{ product.system | uppercase }}</td>
           <td>{{ product.year }}</td>
           <td>{{ product.rating }}</td>
-          <td>
-            <button class="btn btn-edit" (click)="editProduct()">Edit</button>
-            <button class="btn btn-delete" (click)="deleteProduct()">Delete</button>
-          </td>
         </tr>
       </tbody>
     </table>
