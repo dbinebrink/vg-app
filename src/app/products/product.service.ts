@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { IProduct } from './product';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 // SERVICES are injectable, just another class though, a service type of class
 @Injectable({
@@ -10,11 +11,9 @@ import { Observable } from 'rxjs';
 })  
 export class ProductService {
 
-    private productUrl = '/assets/products.json';  
-    
     constructor(private http: HttpClient) { }
 
-    getProducts(): Observable<IProduct[]> {
-        return this.http.get<IProduct[]>(this.productUrl);
+    getProducts(): Observable<IProduct[]> { // this returns an OBSERVABLE, which is a STREAM that contains an ARRAY 
+        return this.http.get<IProduct[]>('/assets/products.json');
     }
 }

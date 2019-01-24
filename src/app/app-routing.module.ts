@@ -9,11 +9,13 @@ import { ProductsComponent } from './products/products.component';
 import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, redirectTo: '' },
   { path: 'user-welcome', component: UserWelcomeComponent },
   { path: 'user-list', component: UserListComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'games', component: GamesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },

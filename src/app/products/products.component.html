@@ -11,15 +11,23 @@
 
 <div class="container-fluid">
 
+  <table class="table table-striped" *ngIf='!products'>
+    <tr>
+      <td> <!-- this only gets seen for a second while loading or if nothing is showing up -->
+        <img src="/assets/loader.gif" alt="Loading...">
+      </td>
+    </tr>
+  </table>
+
   <div class="row">
     <table class="table table-striped" *ngIf='products && products.length'>
       <thead>
         <tr>
-          <th>Title</th>
+          <th><a (click)="sortByTitle()" class="sort-link" title="Sort by title">Title <i class="fa fa-sort"></i></a></th>
           <th>Genre</th> 
           <th>System</th>
-          <th>Year</th>
-          <th>Rating</th>
+          <th><a (click)="sortByYear()" class="sort-link" title="Sort by year">Year <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortByRating()" class="sort-link" title="Sort by year">Rating <i class="fa fa-sort"></i></a></th>
         </tr>
       </thead>
       <tbody> 
@@ -32,6 +40,7 @@
         </tr>
       </tbody>
     </table>
+
 
   </div>
   <div class="row">

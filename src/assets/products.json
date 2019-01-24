@@ -124,7 +124,7 @@
         "title": "DOOM",
         "genre": "shooter",
         "system": "pc",
-        "year": "1993",
+        "year": 1993,
         "rating": 10
     },
     {
@@ -132,7 +132,7 @@
         "title": "Wolfenstein 3-D",
         "genre": "shooter",
         "system": "pc",
-        "year": "1991",
+        "year": 1991,
         "rating": 9
     },
     {
@@ -140,7 +140,7 @@
         "title": "Batman",
         "genre": "platformer",
         "system": "nes",
-        "year": "1988",
+        "year": 1988,
         "rating": 8
     },
     {
@@ -148,7 +148,7 @@
         "title": "Mega Man 5",
         "genre": "platformer",
         "system": "nes",
-        "year": "1992",
+        "year": 1992,
         "rating": 8
     },
     {
@@ -156,7 +156,7 @@
         "title": "Legend of the Mystical Ninja",
         "genre": "platformer",
         "system": "snes",
-        "year": "1992",
+        "year": 1992,
         "rating": 9
     },
     {
@@ -164,7 +164,7 @@
         "title": "Ghost 'n Goblins",
         "genre": "platformer",
         "system": "nes",
-        "year": "1987",
+        "year": 1987,
         "rating": 7
     },
     {
@@ -172,7 +172,7 @@
         "title": "Ninja Gaiden",
         "genre": "platformer",
         "system": "nes",
-        "year": "1988",
+        "year": 1988,
         "rating": 9
     }
 ]

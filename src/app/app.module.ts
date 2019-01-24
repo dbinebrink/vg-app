@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,6 +20,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -35,16 +37,18 @@ import { GamesComponent } from './games/games.component';
     SidebarComponent,
     UserWelcomeComponent,
     UserListComponent,
-    GamesComponent
+    GamesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
-  bootstrap: [AppComponent],
-  providers: []
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

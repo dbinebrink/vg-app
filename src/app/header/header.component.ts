@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAtom } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  headerTitle = 'Angular VG Store';
+  headerTitle = 'Angular Test App';
+  faAtom = faAtom;
 
   constructor() { }
 

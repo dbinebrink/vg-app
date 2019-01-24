@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  faSignInAlt = faSignInAlt;
 
   navitems = [
     {
@@ -27,6 +29,11 @@ export class NavbarComponent implements OnInit {
       label: 'Game List',
       url: '/games',
       title: 'Go to Game List page'
+    },
+    {
+      label: 'Dashboard D3',
+      url: '/dashboard',
+      title: 'Go to Dashboard page'
     },
     {
       label: 'About',
