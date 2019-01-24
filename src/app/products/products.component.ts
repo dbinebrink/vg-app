@@ -13,14 +13,11 @@ export class ProductsComponent implements OnInit {
   filteredProducts: IProduct[];
 
   _productFilter: string;   
-  errorMessage: any;
 
-  get productFilter(): string {
-    return this._productFilter;
-  }
+  get productFilter(): string { return this._productFilter; }
   set productFilter(value:string) {
     this._productFilter = value;
-    this.filteredProducts = this.productFilter ? this.performFilter(this.productFilter) : this.products;  // if filter word exists, perform the filter, otherwise show all
+    this.filteredProducts = this.productFilter ? this.performFilter(this.productFilter) : this.products;  
   }  
 
   performFilter(keyword: string): IProduct[] {
@@ -36,8 +33,7 @@ export class ProductsComponent implements OnInit {
       products => {
         this.products = products;
         this.filteredProducts = this.products;
-      },
-      error => this.errorMessage = <any>error
+      }
     );
   }
 

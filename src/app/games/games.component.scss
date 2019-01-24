@@ -3,7 +3,13 @@ input {
     display: inline-block;
     margin-right: 10px;
 }
-
 button {
     padding: 5px 10px;
+}
+.container-fluid {
+    padding: 0;
+    padding-bottom: 15px;
+}
+.search-area {
+   padding: 5px 0;
 }

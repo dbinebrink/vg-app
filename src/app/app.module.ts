@@ -15,8 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
-import { SidebarComponent } from './main/sidebar/sidebar.component';
-import { SearchComponent } from './main/search/search.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
@@ -34,7 +33,6 @@ import { GamesComponent } from './games/games.component';
     ProductsComponent,
     HomeComponent,
     SidebarComponent,
-    SearchComponent,
     UserWelcomeComponent,
     UserListComponent,
     GamesComponent

@@ -1,14 +1,20 @@
 <h1>Items</h1>
 <br>
-<div class="form-group">
-  <label for="search">Search keyword: {{ searchKeyword }}</label><br>
-    <input type="search" class="form-control search-box" id="search" [(ngModel)]="searchKeyword">
-    <button type="submit" class="btn btn-default btn-search">Search</button>
-</div>
-<div class="form-group">
-  <label for="filter">Filter keyword: {{ filterKeyword }}</label><br>
-    <input type="filter" class="form-control filter-box" id="filter" [(ngModel)]="gamesFilter">
-    <button type="submit" class="btn btn-default btn-filter">Search</button>
+<div class="container-fluid">
+  <div class="col-md-6 search-area">
+    <div class="form-group">
+      <label for="search">SEARCH for new game:</label><br>
+        <input type="search" class="form-control search-box" id="search" [(ngModel)]="searchKeyword" placeholder="Enter new game here">
+        <button type="submit" class="btn btn-default btn-search">Search</button>
+    </div>
+  </div>
+  <div class="col-md-6 search-area">
+    <div class="form-group">
+      <label for="filter">FILTER these results: {{ gamesFilter }}</label><br>
+        <input type="filter" class="form-control filter-box" id="filter" [(ngModel)]="gamesFilter" placeholder="{{ gamesFilter }}">
+        <button type="submit" class="btn btn-default btn-filter">Search</button>
+    </div>
+  </div>
 </div>
 
 <table class="table table-striped"> 
