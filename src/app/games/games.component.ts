@@ -16,7 +16,7 @@ export class GamesComponent implements OnInit {
 
   constructor(private gamesService: GamesService) { }
 
-  getNewGames(newQuery: any):void {
+  getNewGames(newQuery: string):void {
     this.loadingGoing = true;
 
     this.gamesService.getNewGamesList(newQuery).subscribe(  // subscribe to the observable
@@ -28,6 +28,6 @@ export class GamesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.getNewGames('mega');  // if you want to show a default list of games
+    this.getNewGames('mario');  // if you want to show a default list of games
   }
 }

@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientJsonpModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { CartComponent } from './cart/cart.component';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     FontAwesomeModule
   ],
   providers: [],
