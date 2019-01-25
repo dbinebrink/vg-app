@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { IProduct } from './product';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
 
 // SERVICES are injectable, just another class though, a service type of class
 @Injectable({

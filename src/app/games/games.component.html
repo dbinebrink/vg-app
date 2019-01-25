@@ -4,18 +4,19 @@
   <div class="col-md-6 search-area">
     <div class="form-group">
       <label for="search">SEARCH for new game:</label><br>
-        <input type="search" class="form-control search-box" id="search" [(ngModel)]="searchKeyword" placeholder="Enter new game here">
-        <button type="submit" class="btn btn-default btn-search">Search</button>
-    </div>
-  </div>
-  <div class="col-md-6 search-area">
-    <div class="form-group">
-      <label for="filter">FILTER these results: {{ gamesFilter }}</label><br>
-        <input type="filter" class="form-control filter-box" id="filter" [(ngModel)]="gamesFilter" placeholder="{{ gamesFilter }}">
-        <button type="submit" class="btn btn-default btn-filter">Search</button>
+        <form method="" action="">
+        <input type="search" class="form-control search-box" name="search" id="search" [(ngModel)]="keyword" placeholder="Enter new game here" autocomplete="off">
+        <button type="submit" class="btn btn-default btn-search" (click)="getNewGames(keyword)">Search</button>
+        </form>
     </div>
   </div>
 </div>
+
+<img src="/assets/loader.gif" alt="Loading" style="margin: 0 0 20px;" *ngIf='loadingGoing'>
+
+<table class="table table-striped" *ngIf='!games.results'>
+  <tr><td>{{ myWelcomeString }}</td></tr>
+</table>
 
 <table class="table table-striped" *ngIf='games.results'> 
   <tr>  
@@ -30,7 +31,3 @@
   </tr>
 </table>
 
-
-<table class="table table-striped" *ngIf='!games.results'>
-  <tr><td><img src="/assets/loader.gif"></td></tr>
-</table>

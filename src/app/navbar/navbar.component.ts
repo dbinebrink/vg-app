@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -8,6 +8,8 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent implements OnInit {
   faSignInAlt = faSignInAlt;
+  faCartPlus = faCartPlus;
+  stillLoading: boolean = false;
 
   navitems = [
     {
@@ -19,11 +21,6 @@ export class NavbarComponent implements OnInit {
       label: 'Products',
       url: '/products',
       title: 'Go to Products page'
-    },
-    {
-      label: 'User List',
-      url: '/user-list',
-      title: 'Go to User List page'
     },
     {
       label: 'Game List',
@@ -50,6 +47,8 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // hide the #loader on index.html
+
   }
 
 }

@@ -21,6 +21,7 @@ import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UserWelcomeComponent,
     UserListComponent,
     GamesComponent,
-    DashboardComponent
+    DashboardComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

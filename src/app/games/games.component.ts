@@ -9,35 +9,25 @@ import { GamesService } from './games.service';
 })
 export class GamesComponent implements OnInit {
 
-  games: IGame[] = [];  // initialize an array ready for the list
-  filteredGames: IGame[];
+  games: IGame[] = [];  
+  myWelcomeString: string = "Welcome, enter a new game to search for.";
 
-  searchKeyword: string;
-  _gamesFilter: string;
-
-  get gamesFilter(): string { return this._gamesFilter; }
-  set gamesFilter(value:string) {
-    this._gamesFilter = value; 
-    this.filteredGames = this.gamesFilter ? this.performFilter(this.gamesFilter) : this.games;
-  }
-
-  performFilter(keyword: string): IGame[] {
-
-    keyword = keyword.toLocaleLowerCase();  // what was their keyword filter? set to lowercase, just in case ALL CAPS
-
-    // filter needs an ARRAY below, not a string, it is CHOKING here
-    console.log(Array.isArray(this.games));  // filter will not work! it needs an array below or get an error
-    return this.games.filter((games: IGame) =>  
-      games.name.toLocaleLowerCase().indexOf(keyword) !== -1);
-  }
+  loadingGoing: boolean;
 
   constructor(private gamesService: GamesService) { }
 
-  ngOnInit(): void {
-    this.gamesService.getGamesList().subscribe(
+  getNewGames(newQuery: any):void {
+    this.loadingGoing = true;
+
+    this.gamesService.getNewGamesList(newQuery).subscribe(  // subscribe to the observable
       games => {
+        this.loadingGoing = false;
         this.games = games;  // this is the json response subscription
       }
     );
+  }
+
+  ngOnInit(): void {
+    // this.getNewGames('mega');  // if you want to show a default list of games
   }
 }

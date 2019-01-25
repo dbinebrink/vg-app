@@ -10,6 +10,7 @@ import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, redirectTo: '' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'games', component: GamesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'cart', component: CartComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent },

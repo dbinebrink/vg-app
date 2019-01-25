@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })  
 export class GamesService {
-
-    private apiKey = "18d9156ca88a5d01297a4718912219e86c95bd82";
-    public queryString = "sonic";
-
-    private gamesUrl = '//www.giantbomb.com/api/search/?api_key=' 
-        + this.apiKey + '&format=json'  + '&query=' + this.queryString + '&resources=game';  
+    private gamesUrl = '//www.giantbomb.com/api/search/?resources=game&format=jsonp&api_key=18d9156ca88a5d01297a4718912219e86c95bd82&query=';
 
     constructor(private http: HttpClient) {}
+      
+    getNewGamesList(newString: string): Observable<any[]> {
+        let headerOptions = {                                                                                                                                                         
+            headers: new HttpHeaders({
+                // 'Content-Type': 'application/jsonp',
+                // 'Cross-Domain': 'true',
+                // 'Data-Type': 'jsonp'
+            }), 
+        };
 
-    getGamesList(): Observable<any[]> {
-        return this.http.get<any[]>(this.gamesUrl);
+        return this.http.get<any[]>(this.gamesUrl + newString, headerOptions);
     }
 }

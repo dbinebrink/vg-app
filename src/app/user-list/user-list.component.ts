@@ -11,7 +11,6 @@ import { UserListService } from './user-list.service';
 export class UserListComponent implements OnInit {
 
   users: IUserList[] = [];  // this line initializes a users array variable of type IUserList
-
   errorMessage: any;
 
   constructor(private userListService: UserListService) {  // set default values in the class constructor
