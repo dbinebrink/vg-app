@@ -2,13 +2,13 @@
     <div class="container-fluid">
         <ul class="nav navbar-nav">
             <li *ngFor="let navitem of navitems">
-                <a [routerLink]="[navitem.url]" title="{{ navitem.title }}"> {{ navitem.label }} </a>
+                <a [routerLink]="[navitem.url]" routerLinkActive="active-link" title="{{ navitem.title }}"> {{ navitem.label }} </a>
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a [routerLink]="['/login']">Log In &nbsp;<fa-icon [icon]="faSignInAlt"></fa-icon> </a></li> | 
-            <li><a [routerLink]="['/cart']">Shopping Cart &nbsp;<fa-icon [icon]="faCartPlus"></fa-icon> </a></li>
-            <li><a [routerLink]="['/user-list']">User List &nbsp; </a></li>
+            <li><a [routerLink]="['/login']" routerLinkActive="active-link">Log In &nbsp;<fa-icon [icon]="faSignInAlt"></fa-icon> </a></li> | 
+            <li><a [routerLink]="['/cart']" routerLinkActive="active-link">Shopping Cart &nbsp;<fa-icon [icon]="faCartPlus"></fa-icon> </a></li>
+            <li><a [routerLink]="['/user-list']" routerLinkActive="active-link">User List &nbsp; </a></li>
         </ul>
     </div>
 </nav>

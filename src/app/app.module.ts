@@ -23,6 +23,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CartComponent } from './cart/cart.component';
+import { StarComponent } from './shared/star/star.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CartComponent } from './cart/cart.component';
     UserListComponent,
     GamesComponent,
     DashboardComponent,
-    CartComponent
+    CartComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,

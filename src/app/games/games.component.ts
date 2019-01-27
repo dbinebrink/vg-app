@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IGame } from './games';
 import { GamesService } from './games.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-games',
@@ -14,7 +15,7 @@ export class GamesComponent implements OnInit {
 
   loadingGoing: boolean;
 
-  constructor(private gamesService: GamesService) { }
+  constructor(private gamesService: GamesService, private http: HttpClient) { }
 
   getNewGames(newQuery: string):void {
     this.loadingGoing = true;

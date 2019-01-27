@@ -14,7 +14,6 @@ import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, redirectTo: '' },
-  { path: 'user-welcome', component: UserWelcomeComponent },
   { path: 'user-list', component: UserListComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'games', component: GamesComponent },
@@ -23,6 +22,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'user-welcome', component: UserWelcomeComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent, redirectTo: '' }
 ];

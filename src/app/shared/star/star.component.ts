@@ -1,0 +1,19 @@
+import { Component, OnChanges, Input } from '@angular/core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+@Component({
+  selector: 'pm-star',
+  templateUrl: './star.component.html',
+  styleUrls: ['./star.component.scss']
+})
+export class StarComponent implements OnChanges {
+  @Input() rating: number;
+  starWidth: number;
+  faStar = faStar;
+
+  constructor() { }
+
+  ngOnChanges(): void {
+      this.starWidth = this.rating * 80 / 5;
+  }
+}

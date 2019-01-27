@@ -13,7 +13,7 @@
 
   <table class="table table-striped" *ngIf='!products'>
     <tr>
-      <td> <!-- this only gets seen for a second while loading or if nothing is showing up -->
+      <td> 
         <img src="/assets/loader.gif" alt="Loading...">
       </td>
     </tr>
@@ -36,11 +36,12 @@
           <td>{{ product.genre | titlecase }}</td>
           <td>{{ product.system | uppercase }}</td>
           <td>{{ product.year }}</td>
-          <td>{{ product.rating }}</td>
+          <td style="max-width: 120px;">
+            <pm-star [rating]="product.rating"></pm-star> 
+          </td>
         </tr>
       </tbody>
     </table>
-
 
   </div>
   <div class="row">
