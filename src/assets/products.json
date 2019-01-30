@@ -4,7 +4,8 @@
         "title": "F-Zero",
         "genre": "racer",
         "system": "snes",
-        "year": "1991",
+        "year": 1991,
+        "price": 17.95,
         "rating": 9
     },
     {
@@ -12,7 +13,8 @@
         "title": "Zelda: A Link to the Past",
         "genre": "adventure",
         "system": "snes",
-        "year": "1992",
+        "year": 1992,
+        "price": 15.95,
         "rating": 10
     },
     {
@@ -20,7 +22,8 @@
         "title": "Captain Skyhawk",
         "genre": "shooter",
         "system": "nes",
-        "year": "1988",
+        "year": 1988,
+        "price": 11.95,
         "rating": 8
     },
     {
@@ -28,7 +31,8 @@
         "title": "Rad Gravity",
         "genre": "adventure",
         "system": "nes",
-        "year": "1989",
+        "year": 1989,
+        "price": 12.95,
         "rating": 6
     },
     {
@@ -36,7 +40,8 @@
         "title": "Super Mario Bros 3",
         "genre": "platformer",
         "system": "nes",
-        "year": "1989",
+        "year": 1989,
+        "price": 9.95,
         "rating": 9
     },
     {
@@ -44,7 +49,8 @@
         "title": "Blast Corp",
         "genre": "action",
         "system": "n64",
-        "year": "1996",
+        "year": 1996,
+        "price": 8.95,
         "rating": 9
     },
     {
@@ -52,7 +58,8 @@
         "title": "Mario 64",
         "genre": "platformer",
         "system": "n64",
-        "year": "1995",
+        "year": 1995,
+        "price": 29.95,
         "rating": 10
     },
     {
@@ -60,7 +67,8 @@
         "title": "Mega Man 2",
         "genre": "platformer",
         "system": "nes",
-        "year": "1988",
+        "year": 1988,
+        "price": 29.95,
         "rating": 10
     },
     {
@@ -68,7 +76,8 @@
         "title": "Mega Man 3",
         "genre": "platformer",
         "system": "nes",
-        "year": "1989",
+        "year": 1989,
+        "price": 39.95,
         "rating": 9
     },
     {
@@ -76,7 +85,8 @@
         "title": "Goldeneye",
         "genre": "shooter",
         "system": "n64",
-        "year": "1997",
+        "year": 1997,
+        "price": 19.95,
         "rating": 9
     },
     {
@@ -84,7 +94,8 @@
         "title": "Fester's Quest",
         "genre": "platformer",
         "system": "nes",
-        "year": "1987",
+        "year": 1987,
+        "price": 4.95,
         "rating": 7
     },
     {
@@ -92,7 +103,8 @@
         "title": "Zelda: Ocarina of Time",
         "genre": "platformer",
         "system": "n64",
-        "year": "1998",
+        "year": 1998,
+        "price": 19.95,
         "rating": 9
     },
     {
@@ -100,7 +112,8 @@
         "title": "Super Mario Bros 2",
         "genre": "platformer",
         "system": "nes",
-        "year": "1989",
+        "year": 1989,
+        "price": 3.95,
         "rating": 9
     },
     {
@@ -108,7 +121,8 @@
         "title": "Teenage Mutant Ninja Turtles",
         "genre": "platformer",
         "system": "nes",
-        "year": "1987",
+        "year": 1987,
+        "price": 19.95,
         "rating": 7
     },
     {
@@ -116,7 +130,8 @@
         "title": "A Boy and his Blob",
         "genre": "adventure",
         "system": "nes",
-        "year": "1989",
+        "year": 1989,
+        "price": 6.95,
         "rating": 6
     },
     {
@@ -125,6 +140,7 @@
         "genre": "shooter",
         "system": "pc",
         "year": 1993,
+        "price": 19.95,
         "rating": 10
     },
     {
@@ -133,6 +149,7 @@
         "genre": "shooter",
         "system": "pc",
         "year": 1991,
+        "price": 15.95,
         "rating": 9
     },
     {
@@ -141,6 +158,7 @@
         "genre": "platformer",
         "system": "nes",
         "year": 1988,
+        "price": 19.95,
         "rating": 8
     },
     {
@@ -149,6 +167,7 @@
         "genre": "platformer",
         "system": "nes",
         "year": 1992,
+        "price": 5.95,
         "rating": 8
     },
     {
@@ -157,6 +176,7 @@
         "genre": "platformer",
         "system": "snes",
         "year": 1992,
+        "price": 19.95,
         "rating": 9
     },
     {
@@ -165,6 +185,7 @@
         "genre": "platformer",
         "system": "nes",
         "year": 1987,
+        "price": 19.95,
         "rating": 7
     },
     {
@@ -173,6 +194,7 @@
         "genre": "platformer",
         "system": "nes",
         "year": 1988,
+        "price": 19.95,
         "rating": 9
     }
 ]

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faSignInAlt, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
+import { AuthService } from '../_services/auth.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -11,7 +13,20 @@ export class NavbarComponent implements OnInit {
   faCartPlus = faCartPlus;
   stillLoading: boolean = false;
 
-  navitems = [
+  constructor(private authService: AuthService) { }
+
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn;   // the auth service should provide us with the logged in status, NOT the navbar itself
+  }
+
+  get userName(): string {
+    if (this.authService.currentUser) {  // the auth service provides us with the currentUser info, not the navbar
+      return this.authService.currentUser.userName;
+    }
+    return '';
+  }
+
+  public navitems = [  
     {
       label: 'Home',
       url: '/home',
@@ -44,11 +59,7 @@ export class NavbarComponent implements OnInit {
     }
   ];
 
-  constructor() { }
-
   ngOnInit() {
-    // hide the #loader on index.html
-
   }
 
 }

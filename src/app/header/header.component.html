@@ -1,6 +1,12 @@
 <header class="container-fluid">
-    <h1><fa-icon [icon]="faAtom"></fa-icon> {{ headerTitle }}</h1>
+    <div class="col-md-9">
+        <h1><fa-icon [icon]="faAtom"></fa-icon> {{ headerTitle }}</h1>
+    </div>
+    <div class="col-md-3 text-right"> <!-- isLoggedIn is an APP-WIDE COMPONENT PROPERTY -->
+        <p *ngIf="!isLoggedIn">Hi there. You should log in. The weather is: 27 degrees</p>
+        <p *ngIf="isLoggedIn">Welcome user! Info or error message here:</p>
+    </div>
 </header>
 
-
 <img src="/assets/loader.gif" alt="Loading..." id="loader" *ngIf="stillLoading">
+

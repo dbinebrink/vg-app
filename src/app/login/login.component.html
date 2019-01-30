@@ -1,14 +1,44 @@
 <!-- all forms need FormsModule imported, fyi -->
-<div class="container-fluid">
-  <h2>Log In</h2>
-  <div id="error-box">this is an error box</div>
 
-  <form class="login-form">
-    <input name="username" placeholder="Username" [(ngModel)]="username" type="text" autocomplete="off" required />
-    <input name="password" placeholder="Password" [(ngModel)]="password" type="password" autocomplete="off" required />
-    
-    <input type="submit" value="Log In" class="btn btn-primary" (click)="login()" />
-  </form>
+<p id="error-box"></p>
 
+<div class="card">
 
+  <div class="card-body">
+
+    <form novalidate (ngSubmit)="login(loginForm)" #loginForm="ngForm" autocomplete="off">
+
+      <fieldset>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-label" for="userNameId">Username</label>
+          <div class="col-md-8">
+            <input class="form-control" id="userNameId" type="text" placeholder="Username" required ngModel name="userName" #userNameVar="ngModel"
+                   [ngClass]="{'is-invalid': (userNameVar.touched || userNameVar.dirty) && !userNameVar.valid }" />
+            <span class="invalid-feedback">
+              <span *ngIf="userNameVar.errors?.required"> Username is required. </span>
+            </span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-2 col-form--label" for="passwordId">Password</label>
+          <div class="col-md-8">
+            <input class="form-control" id="passwordId" type="password" placeholder="Password" required ngModel name="password" #passwordVar="ngModel"
+                   [ngClass]="{'is-invalid': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }" />
+            <span class="invalid-feedback">
+              <span *ngIf="passwordVar.errors?.required"> Password is required. </span>
+            </span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 offset-md-2">
+            <button class="btn btn-primary mr-3" type="submit" style="width:80px" [disabled]="!loginForm.valid"> Log In </button>
+          </div>
+        </div>
+      </fieldset>
+
+    </form>
+
+  </div>
+
+  <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}} </div>
 </div>
