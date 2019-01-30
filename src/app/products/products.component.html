@@ -27,6 +27,7 @@
           <th>Genre</th> 
           <th>System</th>
           <th><a (click)="sortByYear()" class="sort-link" title="Sort by year">Year <i class="fa fa-sort"></i></a></th>
+          <th>Price</th>
           <th><a (click)="sortByRating()" class="sort-link" title="Sort by year">Rating <i class="fa fa-sort"></i></a></th>
         </tr>
       </thead>
@@ -36,6 +37,7 @@
           <td>{{ product.genre | titlecase }}</td>
           <td>{{ product.system | uppercase }}</td>
           <td>{{ product.year }}</td>
+          <td>${{ product.price }}</td>
           <td style="max-width: 120px;">
             <pm-star [rating]="product.rating"></pm-star> 
           </td>

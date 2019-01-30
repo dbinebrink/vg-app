@@ -6,9 +6,19 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a [routerLink]="['/login']" routerLinkActive="active-link">Log In &nbsp;<fa-icon [icon]="faSignInAlt"></fa-icon> </a></li> | 
-            <li><a [routerLink]="['/cart']" routerLinkActive="active-link">Shopping Cart &nbsp;<fa-icon [icon]="faCartPlus"></fa-icon> </a></li>
-            <li><a [routerLink]="['/user-list']" routerLinkActive="active-link">User List &nbsp; </a></li>
+            <!-- not logged in -->
+            <li *ngIf="!isLoggedIn">
+                <a [routerLink]="['/login']" routerLinkActive="active-link">Log In &nbsp;<fa-icon [icon]="faSignInAlt"></fa-icon> </a>
+            </li>
+
+            <!-- logged in -->
+            <li *ngIf="isLoggedIn">  <!-- always do a ROUTE FUNCTION and CLICK FUNCTION on every link -->
+                <a [routerLink]="['/logout']" (click)="logOut()" routerLinkActive="active-link">Log Out <fa-icon [icon]="faSignInAlt"></fa-icon> </a>
+            </li>
+            <li *ngIf="isLoggedIn"><a [routerLink]="['/user-list']" routerLinkActive="active-link">User List</a></li>
+            <li *ngIf="isLoggedIn">
+                <a [routerLink]="['/cart']" routerLinkActive="active-link">Shopping Cart <fa-icon [icon]="faCartPlus"></fa-icon></a>
+            </li>
         </ul>
     </div>
 </nav>

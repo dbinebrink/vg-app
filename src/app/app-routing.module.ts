@@ -11,6 +11,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { GamesComponent } from './games/games.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CartComponent } from './cart/cart.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, redirectTo: '' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
   { path: 'user-welcome', component: UserWelcomeComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent, redirectTo: '' }
