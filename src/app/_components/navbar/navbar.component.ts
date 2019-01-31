@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faSignInAlt, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
-import { AuthService } from '../_services/auth.service';
+import { AuthService } from '../../_services/auth.service';
 
 @Component({
   selector: 'app-navbar',

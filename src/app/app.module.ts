@@ -8,23 +8,23 @@ import { HttpClientJsonpModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { MainComponent } from './main/main.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { UserWelcomeComponent } from './user-welcome/user-welcome.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { GamesComponent } from './games/games.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CartComponent } from './cart/cart.component';
-import { StarComponent } from './shared/star/star.component';
-import { LogoutComponent } from './logout/logout.component';
+import { HeaderComponent } from './_components/header/header.component';
+import { FooterComponent } from './_components/footer/footer.component';
+import { NavbarComponent } from './_components/navbar/navbar.component';
+import { MainComponent } from './_components/main/main.component';
+import { AboutComponent } from './_components/about/about.component';
+import { ContactComponent } from './_components/contact/contact.component';
+import { LoginComponent } from './_components/login/login.component';
+import { HomeComponent } from './_components/home/home.component';
+import { ProductsComponent } from './_components/products/products.component';
+import { SidebarComponent } from './_components/sidebar/sidebar.component';
+import { UserWelcomeComponent } from './_components/user-welcome/user-welcome.component';
+import { UserListComponent } from './_components/user-list/user-list.component';
+import { GamesComponent } from './_components/games/games.component';
+import { DashboardComponent } from './_components/dashboard/dashboard.component';
+import { CartComponent } from './_components/cart/cart.component';
+import { LogoutComponent } from './_components/logout/logout.component';
+import { StarComponent } from './_shared/star/star.component';
 
 @NgModule({
   declarations: [

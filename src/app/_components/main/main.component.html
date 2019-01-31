@@ -1,0 +1,15 @@
+<main class="container-fluid">
+
+    <div class="container main-wrapper">
+      <div class="row">
+          <div class="col-md-9 main-content" [@slideInAnimation]="o.isActivated ? o.activatedRoute : ''">
+            
+            <router-outlet #o="outlet"></router-outlet>  <!-- put an animation outlet on the outlet -->
+            
+          </div>
+          <app-sidebar></app-sidebar>
+        </div>
+      </div>
+
+  </main>
+

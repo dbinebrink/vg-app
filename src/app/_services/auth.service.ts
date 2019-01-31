@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { User } from '../login/user';
+import { User } from '../_components/login/user';
 import { Router } from '@angular/router';
 
 
