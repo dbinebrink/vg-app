@@ -1,5 +1,98 @@
+// global app-wide stuff here
+h2 {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+p {
+    padding: 5px;
+    margin: 0;
+}
 
-/* Spinner */
+// header stuff
+header {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    
+}
+.top-row {
+    padding: 15px 25px;
+    background-color: rgb(168, 216, 235);
+    background-color: #003366;
+    background-image: linear-gradient(to right, rgb(168, 216, 235), rgb(168, 236, 235));
+    background-image: url('/assets/header-bg.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+// navbar stuff
+a.navbar-brand {
+    font-weight: bold;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: #fff;
+}
+.navbar-dark {
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0;
+    box-shadow: 0 5px 10px rgba(0,50,100,0.2);
+    background: #003366;
+    border: 0;
+    li {
+        padding: 0px;
+    }
+    li a {
+        color: #fff;
+        border-right: solid 1px #336699;
+        padding: 8px 30px;
+    }
+    li a:hover {
+        color: #97c7f7;
+    }
+    .active-link {
+        font-weight: bold;
+        background: rgba(255,255,255,0.05);
+    }
+    .navbar-right {
+        background-color: #205891;
+    }
+}
+
+// main stuff here
+main {
+    padding: 170px 20px 40px 20px;  // the header is sticky, push down to accommodate
+    background: #fff;
+}
+.main-wrapper {
+    max-width: 1200px; // we dont want a full container-fluid
+    margin: 0 auto;
+}
+.main-column {
+    padding: 30px 30px 80px 30px;
+    border: solid 1px #f2f8fd;
+}
+
+
+.pr-3 {
+    padding-right: 130px;
+}
+
+// footer stuff here
+footer {
+    position: fixed;
+    padding: 5px 20px;
+    background: #003366;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+// spinner here 
 .spinner {
     font-size:300%;
     position:absolute;

@@ -10,15 +10,9 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  // username: string;
-  // password: string;
-  // loggedIn: boolean;
-
   constructor(private router: Router, private authService: AuthService) { }
 
-  ngOnInit() {
-    // this.loggedIn = false;
-  }
+  ngOnInit() { }
 
   login(loginForm: NgForm) {
     if (loginForm && loginForm.valid) {

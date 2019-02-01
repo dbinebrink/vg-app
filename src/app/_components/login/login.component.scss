@@ -24,3 +24,8 @@
     font-family: Arial;
 }
 
+button:disabled {
+    background: rgb(147, 209, 250);
+    border: none;
+    cursor: help;
+}

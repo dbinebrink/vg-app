@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
 import { AuthService } from './_services/auth.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, NavigationCancel } from '@angular/router';
+import { slideInAnimation, fadeInAnimation } from './app.animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [ fadeInAnimation ]
 })
 export class AppComponent {
   loading = true;
 
+  stillLoading: boolean = false;
+
   constructor(private authService: AuthService, private router: Router) {
-    // subscribe to the routing observable on init the app to determine app-wide when to show spinner
     router.events.subscribe((routerEvent: Event) => {
-      this.checkRouterEvent(routerEvent);
+      this.checkRouterEvent(routerEvent);  // subscribe to the routing observable determine app-wide to show spinner
     })
   }
 
@@ -38,7 +41,12 @@ export class AppComponent {
     }
     return '';
   }
-  logOut(): void {
+
+  logIn(): void {
+    this.router.navigate(['/user-welcome']);      
+  }
+
+  logOut(): void {  // notice the camelCase in the component
     this.authService.logout();
     this.router.navigateByUrl('/logout');
     console.log('Log out');

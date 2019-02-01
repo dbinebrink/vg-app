@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+// these are the super-global styles, most app-wide styles are in app component scss
 
 * { 
     margin: 0;
@@ -8,8 +9,14 @@
     box-sizing: border-box;
     font-family: 'Lato', Arial, sans-serif;
 }
+html {
+    font-size: 0.9em;
+    font-size: 0.9rem;
+
+}
 body {
-    background: rgb(238, 242, 252);
+    // background: rgb(238, 242, 252);
+    background: #fff;
 }
 p {
     margin: 20px 0;
@@ -24,11 +31,7 @@ h1 {
     margin-left: -2px;
     color: #003366;
 }
-h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 20px 0;
-}
+
 table.table-striped tbody tr:nth-child(odd) {
     background: #f5faff;
 }

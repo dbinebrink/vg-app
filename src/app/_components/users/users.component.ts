@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { IUserList } from './user-list';
-import { UserListService } from './user-list.service';
-// import { KeysPipe } from './shared/keys.pipe';
+import { IUserList } from './users';
+import { UserListService } from './users.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
 export class UserListComponent implements OnInit {
 
   users: IUserList[] = [];  // this line initializes a users array variable of type IUserList
   errorMessage: any;
 
-  constructor(private userListService: UserListService) {  // set default values in the class constructor
-  }
+  constructor(private userListService: UserListService) { }
 
   ngOnInit(): void {
     this.userListService.getUserList().subscribe(

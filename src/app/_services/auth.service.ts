@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   currentUser: User;  // this is the most critical part is WHO IS THE CURRENT USER, DEFINE AND OBJECT FOR THEM
+  redirectUrl: string;  // where was the user trying to go?
 
   constructor(private router: Router) { }
 
@@ -25,20 +26,18 @@ export class AuthService {
     if (userName === 'admin' && password === 'admin') {
       console.log('hello admin')
       this.currentUser = { id: 1, userName: userName, isAdmin: true };  // admin is #1
-      this.router.navigate(['/user-welcome']);      
       return;  // stop executing and go back
     }
     else if (userName.length && password.length) {
       console.log('hello regular user')
       this.currentUser = { id: 2, userName: userName, isAdmin: false };  // anyone else is #2
-      this.router.navigate(['/user-welcome']);  
+      return;
     }
   }
  
-  logout(): void {
+  logout(): void {  // notice the lowercase in the service
     console.log('the user is now logged out');
     this.currentUser = null;
-    // this.isLoggedIn = false;
-    this.router.navigate(['/logout']);
+    // send a message to secondary route that user has logged out
   }
 }
