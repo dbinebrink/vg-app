@@ -3,10 +3,6 @@ import { AuthService } from './_services/auth.service';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, NavigationCancel } from '@angular/router';
 import { fadeInAnimation } from './app.animation';
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireAuth } from '@angular/fire/auth';
-
 
 @Component({
   selector: 'app-root',
@@ -17,43 +13,14 @@ import { AngularFireAuth } from '@angular/fire/auth';
 export class AppComponent {
   loading = true;
 
-  form: FormGroup;  // firebase
-  stillLoading: boolean = false; // firebase
+  stillLoading: boolean = false; 
 
-  constructor(private authService: AuthService, private router: Router, private fb: FormBuilder, private db: AngularFireDatabase, private afAuth: AngularFireAuth) {   // firebase fb and af
-    this.createForm();   // firebase
-
+  constructor(private authService: AuthService, private router: Router) {   // firebase fb and af
     router.events.subscribe((routerEvent: Event) => {
       this.checkRouterEvent(routerEvent);  // subscribe to the routing observable determine app-wide to show spinner
     })
   }
   
-  // FIREBASE STUFF HERE
-  // FIREBASE STUFF HERE
-  createForm() {  // firebase whole thing
-    this.form = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      message: ['', Validators.required],
-    });
-  }
-  onSubmit() {   // firebase whole thing
-    console.log('a form has been submitted. check the firebase database.')
-    const {name, email, message} = this.form.value;
-    const html = `
-      <div>From: ${name}</div>
-      <div>Email: <a href="mailto:${email}">${email}</a></div>
-      <div>Message: ${message}</div>
-    `;
-    let formRequest = { name, email, message, html };
-    this.db.list('/messages').push(formRequest);
-    this.form.reset();
-    alert('Form is submitted. Thanks.');
-  }
-  // FIREBASE STUFF ENDS HERE
-  // FIREBASE STUFF ENDS HERE
-
-
   checkRouterEvent(routerEvent: Event): void {
     if(routerEvent instanceof NavigationStart) {  
       this.loading = true;  // spinner appears when routing begins
