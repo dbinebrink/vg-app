@@ -62,6 +62,21 @@
         <div class="row">
             <div class="col-md-9 main-column" [@fadeInAnimation]="o.isActivated ? o.activatedRoute : ''">
 
+
+                
+<div class="container-fluid">
+    <h1>Information Request</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <p><input type="text" placeholder="Name" formControlName="name"></p>
+      <p><input type="text" placeholder="Email" formControlName="email"></p>
+      <p><textarea placeholder="Message" formControlName="message"></textarea></p>
+      <p><button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+
+</div>
+
+
+
                 <!-- router outlet here -->
                 <router-outlet #o="outlet"></router-outlet>  <!-- put an animation outlet on the outlet -->
 
