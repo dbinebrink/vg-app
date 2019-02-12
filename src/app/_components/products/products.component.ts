@@ -38,28 +38,10 @@ export class ProductsComponent implements OnInit {
     );
   }
 
-  sortByTitle(): void {  // if clicked, sort the products by year
+  sortBy(str: string): void {  
     this.productService.getProducts().subscribe(
       products => {
-        this.products = products.sort((a, b) => (a.title > b.title ? 1 : -1));
-        this.filteredProducts = this.products;
-      }
-    );
-  }
-  
-  sortByYear(): void {  // if clicked, sort the products by year
-    this.productService.getProducts().subscribe(
-      products => {
-        this.products = products.sort((a, b) => (a.year > b.year ? 1 : -1));
-        this.filteredProducts = this.products;
-      }
-    );
-  }
-  
-  sortByRating(): void {  // if clicked, sort the products by year
-    this.productService.getProducts().subscribe(
-      products => {
-        this.products = products.sort((a, b) => (a.rating > b.rating ? 1 : -1));
+        this.products = products.sort((a, b) => (a[str] > b[str] ? 1 : -1));
         this.filteredProducts = this.products;
       }
     );

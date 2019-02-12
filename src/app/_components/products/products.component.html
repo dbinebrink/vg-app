@@ -1,10 +1,10 @@
+
 <h1>Products</h1>
 <hr>
 
 <div class="form-group">
   <label for="search">Filter keyword: {{ productFilter }}</label><br>
     <input type="search" class="form-control search-box" id="search" [(ngModel)]="productFilter">
-    <button type="submit" class="btn btn-default btn-search">Filter</button>
 </div>
 
 
@@ -14,12 +14,13 @@
     <table class="table table-striped" *ngIf='products && products.length'>
       <thead>
         <tr>
-          <th><a (click)="sortByTitle()" class="sort-link" title="Sort by title">Title <i class="fa fa-sort"></i></a></th>
-          <th>Genre</th> 
-          <th>System</th>
-          <th><a (click)="sortByYear()" class="sort-link" title="Sort by year">Year <i class="fa fa-sort"></i></a></th>
-          <th>Price</th>
-          <th><a (click)="sortByRating()" class="sort-link" title="Sort by year">Rating <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortBy('title')" class="sort-link">Title <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortBy('genre')" class="sort-link">Genre <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortBy('system')" class="sort-link">System <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortBy('year')" class="sort-link">Year <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortBy('price')" class="sort-link">Price <i class="fa fa-sort"></i></a></th>
+          <th><a (click)="sortBy('rating')" class="sort-link">Rating <i class="fa fa-sort"></i></a></th>
+          <th>Edit</th>
         </tr>
       </thead>
       <tbody> 
@@ -32,15 +33,12 @@
           <td style="max-width: 120px;">
             <pm-star [rating]="product.rating"></pm-star> 
           </td>
+          <td> 
+            <button type="button" class="btn btn-sm btn-primary" [routerLink]="['/products', product.id, 'edit']">Edit</button>
+          </td>
         </tr>
       </tbody>
     </table>
-
-  </div>
-  <div class="row">
-
-    <hr>
-    <button type="submit" class="btn btn-default">Add Product</button>
 
   </div>
 </div>
