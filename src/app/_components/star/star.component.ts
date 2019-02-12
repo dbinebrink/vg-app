@@ -1,5 +1,4 @@
 import { Component, OnChanges, Input } from '@angular/core';
-// import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'pm-star',
@@ -9,7 +8,6 @@ import { Component, OnChanges, Input } from '@angular/core';
 export class StarComponent implements OnChanges {
   @Input() rating: number;
   starWidth: number;
-  // faStar = faStar;
 
   constructor() { }
 

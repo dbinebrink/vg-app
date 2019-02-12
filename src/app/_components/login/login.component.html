@@ -1,5 +1,9 @@
 <!-- all forms need FormsModule imported, fyi -->
 
+<h1>Log In</h1>
+
+<hr>
+
 <p id="error-box"></p>
 
 <div class="card">
@@ -8,7 +12,6 @@
 
     <form novalidate (ngSubmit)="login(loginForm)" #loginForm="ngForm" autocomplete="off">
 
-      <fieldset>
         <div class="form-group row">
           <label class="col-md-2 col-form-label" for="userNameId">Username</label>
           <div class="col-md-8">
@@ -34,7 +37,6 @@
             <button class="btn btn-primary mr-3" type="submit" style="width:80px" [disabled]="!loginForm.valid"> Log In </button>
           </div>
         </div>
-      </fieldset>
 
     </form>
 

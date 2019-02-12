@@ -9,7 +9,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  errorMessage: boolean = false;
+  
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() { }

@@ -20,10 +20,8 @@ header {
 }
 .top-row {
     padding: 15px 25px;
-    background-color: rgb(168, 216, 235);
-    background-color: #003366;
-    background-image: linear-gradient(to right, rgb(168, 216, 235), rgb(168, 236, 235));
-    background-image: url('/assets/header-bg.jpg');
+    background-color: #155799;
+    background-image: url('~/assets/header-bg.jpg');
     background-size: cover;
     color: #fff;
 }
@@ -31,8 +29,9 @@ header {
 // navbar stuff
 a.navbar-brand {
     font-weight: bold;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-size: 32px;
+    font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    letter-spacing: 1px;
     color: #fff;
 }
 .navbar-dark {

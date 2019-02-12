@@ -3,10 +3,10 @@
 <header class="container-fluid">
     <div class="row top-row">
         <div class="col-md-9">
-            <a [routerLink]="['/']" class="navbar-brand"><i class="fa fa-area-chart"></i> Test Application</a>
+            <a [routerLink]="['/']" class="navbar-brand"><i class="fa fa-chrome"></i> Application Firebase</a>
         </div>
         <div class="col-md-3 text-right" *ngIf="!isLoggedIn"> <!-- isLoggedIn is an APP-WIDE COMPONENT PROPERTY -->
-            <h2>Hi there.</h2>
+            <h2>Hi there, Guest User.</h2>
             <p>The weather is: 27 degrees</p>
         </div>
         <div class="col-md-3 text-right" *ngIf="isLoggedIn"> 
@@ -22,34 +22,37 @@
                     <a [routerLink]="['/home']" routerLinkActive="active-link" class="nav-link"> <i class="fa fa-home"></i> Home </a>
                 </li>
                 <li class="nav-item">
-                    <a [routerLink]="['/products']" routerLinkActive="active-link" class="nav-link"> Products </a>
+                    <a [routerLink]="['/products']" routerLinkActive="active-link" class="nav-link"> Product List </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link"> Add Product </a>
+                </li>
+                <!-- <li class="nav-item">
                     <a [routerLink]="['/games']" routerLinkActive="active-link" class="nav-link"> Game List </a>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                     <a [routerLink]="['/dashboard']" routerLinkActive="active-link" class="nav-link"> Dashboard D3 </a>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                     <a [routerLink]="['/about']" routerLinkActive="active-link" class="nav-link"> About </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a [routerLink]="['/contact']" routerLinkActive="active-link" class="nav-link"> Contact </a>
                 </li>
             </ul>
             <ul class="navbar-nav navbar-right ml-auto">  <!-- ml-auto just does an auto-align right -->
                 <li class="nav-item" *ngIf="!isLoggedIn">
-                    <a [routerLink]="['/login']" class="nav-link">Log In &nbsp;<i class="fa fa-arrow-circle-right"></i> </a>
+                    <a [routerLink]="['/login']" class="nav-link">LOG IN &nbsp;<i class="fa fa-arrow-circle-right"></i> </a>
                 </li>
     
                 <li class="nav-item" *ngIf="isLoggedIn">
                     <a [routerLink]="['/users']" class="nav-link" routerLinkActive="active-link">User List</a>
                 </li>
-                <li class="nav-item" *ngIf="isLoggedIn">
+                <!-- <li class="nav-item" *ngIf="isLoggedIn">
                     <a [routerLink]="['/cart']" class="nav-link" routerLinkActive="active-link">Shopping Cart <i class="fa fa-shopping-cart"></i></a>
-                </li>
+                </li> -->
                 <li class="nav-item" *ngIf="isLoggedIn">  <!-- do a ROUTE and CLICK on every link -->
-                    <a (click)="logOut()" class="nav-link" [routerLink]>Log Out <i class="fa fa-home"></i> </a>
+                    <a (click)="logOut()" class="nav-link" [routerLink]>LOG OUT<i class="fa fa-home"></i> </a>
                 </li>
             </ul>
         </nav>
@@ -80,3 +83,4 @@
 <footer class="container-fluid">
     <p>Copyright &copy; Dan Binebrink Studio</p>
 </footer>
+
